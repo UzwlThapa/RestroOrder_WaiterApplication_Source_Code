@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/AlertDialog.AppCompat.Light"
+    android:textSize="@dimen/pin_text_size"
+    android:textColor="@color/lightblack"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:id="@+id/tv_numbers"
+    android:background="@drawable/bg_round_login"
+    android:paddingLeft="@dimen/login_pin_padding"
+    android:paddingTop="@dimen/padding_top"
+    android:paddingRight="@dimen/login_pin_padding"
+    android:paddingBottom="@dimen/padding_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1"/>

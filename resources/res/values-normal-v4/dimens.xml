@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="listview_extramenu_height">80dp</dimen>
+    <dimen name="listview_menu_height">100dp</dimen>
+    <dimen name="menu_fragment_width">450dp</dimen>
+    <dimen name="padding_top">10dp</dimen>
+</resources>

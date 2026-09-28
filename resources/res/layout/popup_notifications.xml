@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/thirtytransparentblack"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="true">
+        <TextView
+            android:textSize="@dimen/popup_notifications"
+            android:textColor="@color/white"
+            android:id="@+id/tv_notifications_null"
+            android:background="@color/seventytransparentblack"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Notifications at the moment."/>
+        <ListView
+            android:id="@+id/lv_notifications_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:textColor="#ffffffff"
+        android:state_pressed="true"
+        android:background="@drawable/bg_orange_border"/>
+    <item
+        android:textColor="#ffffffff"
+        android:state_focused="true"
+        android:background="@drawable/bg_orange_border"/>
+    <item
+        android:textColor="#ffff5d1e"
+        android:background="@drawable/bg_white_border"/>
+</selector>

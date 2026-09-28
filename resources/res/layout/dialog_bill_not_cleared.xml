@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_width"
+        android:layout_margin="25dp"
+        android:src="@drawable/ic_restro_logo_new"/>
+    <TextView
+        android:textSize="@dimen/table_name_text"
+        android:layout_gravity="center"
+        android:id="@+id/tv_dialog_exit_message"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Bill Payment is pending for this table. Please order from available table."/>
+    <LinearLayout
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <Button
+            android:textSize="@dimen/menu_menu"
+            android:textColor="@color/black"
+            android:id="@+id/btn_dialog_remove_merge"
+            android:background="@color/fulltransparent"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="Remove Merge"/>
+        <Button
+            android:textSize="@dimen/menu_menu"
+            android:textColor="@color/black"
+            android:id="@+id/btn_dialog_ok_dismiss"
+            android:background="@color/fulltransparent"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="OK"/>
+    </LinearLayout>
+</LinearLayout>

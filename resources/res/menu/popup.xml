@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/abc_ic_menu_paste_mtrl_am_alpha"
+        android:id="@+id/menu_deliver"
+        android:title="Delivered"
+        app:showAsAction="withText|always"/>
+    <item
+        android:icon="@drawable/ic_delete"
+        android:id="@+id/menu_Delete"
+        android:title="Delete"
+        app:showAsAction="withText|always"/>
+    <item
+        android:id="@+id/menu_MoveTo"
+        android:visible="true"
+        android:title="Shift Item To"
+        android:showAsAction="withText|always"/>
+</menu>

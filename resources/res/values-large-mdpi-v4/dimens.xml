@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_shift_rv_layout">320dp</dimen>
+</resources>

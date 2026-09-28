@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_room_type_item"
+    android:padding="@dimen/table_name_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true">
+    <TextView
+        android:textSize="@dimen/view_room_type_item_text_table_size"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/text_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Table 1"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/room_indicator"
+        android:visibility="gone"
+        android:layout_width="@dimen/view_room_item_indicator_width_height"
+        android:layout_height="@dimen/view_room_item_indicator_width_height"
+        android:src="@drawable/indicator_green"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

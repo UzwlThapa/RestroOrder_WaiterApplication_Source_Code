@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:padding="@dimen/activity_main_page_title_padding_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_order_item_sno_paddingRight">
+        <TextView
+            android:textSize="@dimen/activity_main_tv_action_textSize"
+            android:textColor="@color/black"
+            android:id="@+id/tv_extraDataName"
+            android:paddingLeft="@dimen/activity_main_bt_send_marginRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Extra Data Name"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif-condensed"/>
+        <EditText
+            android:textSize="@dimen/activity_main_tv_action_textSize"
+            android:textStyle="bold"
+            android:textColorHint="@color/bg_card_pressed"
+            android:gravity="center"
+            android:id="@+id/sp_extraItems"
+            android:layout_width="@dimen/activity_main_spinner_width"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:inputType="number"
+            android:fontFamily="sans-serif-condensed"/>
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:visibility="gone"
+            android:layout_width="@dimen/group_row_two_paddingLeft"
+            android:layout_height="@dimen/group_row_two_paddingLeft"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</ScrollView>

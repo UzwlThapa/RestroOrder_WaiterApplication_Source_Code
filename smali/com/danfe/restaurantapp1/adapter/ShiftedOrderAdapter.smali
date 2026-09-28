@@ -1,0 +1,724 @@
+###### Class com.danfe.restaurantapp1.adapter.ShiftedOrderAdapter (com.danfe.restaurantapp1.adapter.ShiftedOrderAdapter)
+.class public Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;
+.super Landroid/support/v7/widget/RecyclerView$Adapter;
+.source "ShiftedOrderAdapter.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/support/v7/widget/RecyclerView$Adapter",
+        "<",
+        "Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field private alertDialog:Landroid/app/AlertDialog;
+
+.field context:Landroid/content/Context;
+
+.field orderDetailDbLists:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/danfe/restaurantapp1/model/OrderDetailDb;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field orderExtraItemList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/util/List",
+            "<",
+            "Lcom/danfe/restaurantapp1/model/orderExtraItem;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field orderExtraItems:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+.field status:Ljava/lang/String;
+
+.field temporaryList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/util/List;)V
+    .registers 4
+    .param p1, "applicationContext"    # Landroid/content/Context;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 37
+    .local p2, "temporaryList":Ljava/util/List;, "Ljava/util/List<Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;>;"
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$Adapter;-><init>()V
+
+    .line 33
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->status:Ljava/lang/String;
+
+    .line 38
+    iput-object p1, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->context:Landroid/content/Context;
+
+    .line 39
+    iput-object p2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->temporaryList:Ljava/util/List;
+
+    .line 40
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;)V
+    .registers 5
+    .param p1, "applicationContext"    # Landroid/content/Context;
+    .param p3, "status"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;",
+            ">;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 42
+    .local p2, "orderExtraItems":Ljava/util/List;, "Ljava/util/List<Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;>;"
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$Adapter;-><init>()V
+
+    .line 33
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->status:Ljava/lang/String;
+
+    .line 43
+    iput-object p1, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->context:Landroid/content/Context;
+
+    .line 44
+    iput-object p2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->orderExtraItems:Ljava/util/List;
+
+    .line 45
+    iput-object p3, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->status:Ljava/lang/String;
+
+    .line 46
+    return-void
+.end method
+
+
+# virtual methods
+.method public getItemCount()I
+    .registers 4
+
+    .prologue
+    .line 113
+    iget-object v1, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->status:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_11
+
+    .line 114
+    iget-object v1, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->temporaryList:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    .line 118
+    .local v0, "count":I
+    :goto_10
+    return v0
+
+    .line 116
+    .end local v0    # "count":I
+    :cond_11
+    iget-object v1, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->orderExtraItems:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    .restart local v0    # "count":I
+    goto :goto_10
+.end method
+
+.method public getItemViewType(I)I
+    .registers 2
+    .param p1, "position"    # I
+
+    .prologue
+    .line 123
+    return p1
+.end method
+
+.method public bridge synthetic onBindViewHolder(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V
+    .registers 3
+
+    .prologue
+    .line 25
+    check-cast p1, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    invoke-virtual {p0, p1, p2}, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->onBindViewHolder(Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;I)V
+
+    return-void
+.end method
+
+.method public onBindViewHolder(Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;I)V
+    .registers 10
+    .param p1, "holder"    # Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+    .param p2, "position"    # I
+
+    .prologue
+    const/16 v6, 0x8
+
+    const/4 v5, 0x0
+
+    .line 62
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->status:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a1
+
+    .line 63
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvSn:Landroid/widget/TextView;
+
+    add-int/lit8 v3, p2, 0x1
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 64
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v3, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvItem:Landroid/widget/TextView;
+
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->temporaryList:Ljava/util/List;
+
+    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;
+
+    invoke-virtual {v2}, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;->getROI_ItemName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 65
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v3, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvQty:Landroid/widget/TextView;
+
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->temporaryList:Ljava/util/List;
+
+    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;
+
+    invoke-virtual {v2}, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;->getQuantity()Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Double;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 66
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->temporaryList:Ljava/util/List;
+
+    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;
+
+    invoke-virtual {v2}, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;->getOrderExtraItems()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-eqz v2, :cond_8c
+
+    .line 67
+    new-instance v1, Lcom/danfe/restaurantapp1/adapter/ShowBillAdapter;
+
+    iget-object v3, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->context:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->temporaryList:Ljava/util/List;
+
+    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;
+
+    invoke-virtual {v2}, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList;->getOrderExtraItems()Ljava/util/List;
+
+    move-result-object v2
+
+    const-string v4, "Status"
+
+    invoke-direct {v1, v3, v2, v4}, Lcom/danfe/restaurantapp1/adapter/ShowBillAdapter;-><init>(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;)V
+
+    .line 68
+    .local v1, "showBillAdapter":Lcom/danfe/restaurantapp1/adapter/ShowBillAdapter;
+    new-instance v0, Landroid/support/v7/widget/LinearLayoutManager;
+
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->context:Landroid/content/Context;
+
+    invoke-direct {v0, v2, v5, v5}, Landroid/support/v7/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
+
+    .line 69
+    .local v0, "linearLayoutManager":Landroid/support/v7/widget/LinearLayoutManager;
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->recyclerView:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v2, v0}, Landroid/support/v7/widget/RecyclerView;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
+
+    .line 70
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->recyclerView:Landroid/support/v7/widget/RecyclerView;
+
+    invoke-virtual {v2, v1}, Landroid/support/v7/widget/RecyclerView;->setAdapter(Landroid/support/v7/widget/RecyclerView$Adapter;)V
+
+    .line 82
+    .end local v0    # "linearLayoutManager":Landroid/support/v7/widget/LinearLayoutManager;
+    .end local v1    # "showBillAdapter":Lcom/danfe/restaurantapp1/adapter/ShowBillAdapter;
+    :cond_8c
+    :goto_8c
+    invoke-virtual {p0}, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->getItemCount()I
+
+    move-result v2
+
+    if-gez v2, :cond_a0
+
+    .line 83
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->layouNoData:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v2, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 84
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->layoutData:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v2, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 86
+    :cond_a0
+    return-void
+
+    .line 73
+    :cond_a1
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvExtraItemlist:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 74
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvExtraItemlist:Landroid/widget/TextView;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x2
+
+    invoke-virtual {v2, v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
+
+    .line 75
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v3, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvExtraItemlist:Landroid/widget/TextView;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->orderExtraItems:Ljava/util/List;
+
+    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;
+
+    invoke-virtual {v2}, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;->getQuantity()Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v4, " "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->orderExtraItems:Ljava/util/List;
+
+    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;
+
+    invoke-virtual {v2}, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;->getExtraItem()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v4, " Rs."
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->orderExtraItems:Ljava/util/List;
+
+    .line 76
+    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;
+
+    invoke-virtual {v2}, Lcom/danfe/restaurantapp1/response/EditOrderRequest$OrderDetailsList$orderExtraItem;->getExtraPrice()Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 75
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 77
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvItem:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 78
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvSn:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 79
+    iget-object v2, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    iget-object v2, v2, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvQty:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
+
+    goto/16 :goto_8c
+.end method
+
+.method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .registers 4
+
+    .prologue
+    .line 25
+    invoke-virtual {p0, p1, p2}, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+    .registers 7
+    .param p1, "parent"    # Landroid/view/ViewGroup;
+    .param p2, "viewType"    # I
+
+    .prologue
+    .line 51
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v1
+
+    const v2, 0x7f03006c
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, p1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 52
+    .local v0, "itemView":Landroid/view/View;
+    new-instance v1, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    invoke-direct {v1, p0, v0}, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;-><init>(Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;Landroid/view/View;)V
+
+    iput-object v1, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    .line 53
+    iget-object v1, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;->shiftedOrderHolder:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+
+    return-object v1
+.end method
+
+###### Class com.danfe.restaurantapp1.adapter.ShiftedOrderAdapter.ShiftedOrderHolder (com.danfe.restaurantapp1.adapter.ShiftedOrderAdapter$ShiftedOrderHolder)
+.class public Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;
+.super Landroid/support/v7/widget/RecyclerView$ViewHolder;
+.source "ShiftedOrderAdapter.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = "ShiftedOrderHolder"
+.end annotation
+
+
+# instance fields
+.field layouNoData:Landroid/widget/LinearLayout;
+
+.field layoutData:Landroid/widget/LinearLayout;
+
+.field layoutExtra:Landroid/widget/LinearLayout;
+
+.field recyclerView:Landroid/support/v7/widget/RecyclerView;
+
+.field rvLayout:Landroid/widget/LinearLayout;
+
+.field final synthetic this$0:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;
+
+.field tvExtraItemlist:Landroid/widget/TextView;
+
+.field tvItem:Landroid/widget/TextView;
+
+.field tvQty:Landroid/widget/TextView;
+
+.field tvSn:Landroid/widget/TextView;
+
+
+# direct methods
+.method public constructor <init>(Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;Landroid/view/View;)V
+    .registers 4
+    .param p1, "this$0"    # Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;
+    .param p2, "itemView"    # Landroid/view/View;
+
+    .prologue
+    .line 95
+    iput-object p1, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->this$0:Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter;
+
+    .line 96
+    invoke-direct {p0, p2}, Landroid/support/v7/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
+
+    .line 97
+    const v0, 0x7f0f01d9
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->rvLayout:Landroid/widget/LinearLayout;
+
+    .line 98
+    const v0, 0x7f0f01da
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvSn:Landroid/widget/TextView;
+
+    .line 99
+    const v0, 0x7f0f01db
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvItem:Landroid/widget/TextView;
+
+    .line 100
+    const v0, 0x7f0f01dc
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvQty:Landroid/widget/TextView;
+
+    .line 101
+    const v0, 0x7f0f01e0
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->layouNoData:Landroid/widget/LinearLayout;
+
+    .line 102
+    const v0, 0x7f0f0204
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->layoutData:Landroid/widget/LinearLayout;
+
+    .line 103
+    const v0, 0x7f0f01de
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->layoutExtra:Landroid/widget/LinearLayout;
+
+    .line 104
+    const v0, 0x7f0f01df
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/RecyclerView;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->recyclerView:Landroid/support/v7/widget/RecyclerView;
+
+    .line 105
+    const v0, 0x7f0f01e2
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/danfe/restaurantapp1/adapter/ShiftedOrderAdapter$ShiftedOrderHolder;->tvExtraItemlist:Landroid/widget/TextView;
+
+    .line 107
+    return-void
+.end method

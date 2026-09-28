@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="Responsible">
+        <item>Waiter</item>
+        <item>Customer</item>
+        <item>Chef</item>
+    </array>
+    <array name="table_list">
+        <item>Select</item>
+        <item>A01</item>
+        <item>A02</item>
+        <item>A03</item>
+        <item>B01</item>
+        <item>B02</item>
+        <item>B03</item>
+    </array>
+</resources>

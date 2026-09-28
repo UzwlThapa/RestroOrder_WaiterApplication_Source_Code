@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <layer-list>
+            <item
+                android:left="@dimen/bg_editText_tlr"
+                android:top="@dimen/bg_editText_tlr"
+                android:right="@dimen/bg_editText_tlr"
+                android:bottom="@dimen/bg_editText_tlr">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/lightgrey"/>
+                    <stroke
+                        android:width="@dimen/bg_editText_stroke_width"
+                        android:color="@color/orange"/>
+                    <corners android:radius="@dimen/bg_editText_radius"/>
+                    <padding
+                        android:left="@dimen/bg_editText_padding"
+                        android:top="@dimen/bg_editText_padding"
+                        android:right="@dimen/bg_editText_padding"
+                        android:bottom="@dimen/bg_editText_padding"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

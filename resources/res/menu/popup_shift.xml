@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_delete"
+        android:id="@+id/Table_shift"
+        android:title="Table shift"
+        app:showAsAction="withText|always"/>
+    <item
+        android:icon="@drawable/ic_minus"
+        android:enabled="true"
+        android:id="@+id/menu_remove_merge"
+        android:visible="true"
+        android:title="Remove Merge"
+        app:showAsAction="withText"/>
+    <item
+        android:icon="@drawable/ic_edittable"
+        android:id="@+id/menu_show_bill"
+        android:title="Show Bill"
+        app:showAsAction="withText|always"/>
+    <item
+        android:icon="@drawable/ic_edittable"
+        android:id="@+id/menu_shift_item"
+        android:visible="true"
+        android:title="Shift Item"
+        app:showAsAction="withText|always"/>
+</menu>

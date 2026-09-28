@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_main_page_title_padding_left"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/view_table_grid_text_table_size"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/tv_itemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item Name"/>
+    <View
+        android:id="@+id/view"
+        android:background="@color/bg_menu_title_center_color"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/activity_main_view_width"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_subExtraItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

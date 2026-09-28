@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tsbody_height">450dp</dimen>
+    <dimen name="tsheader_height">150dp</dimen>
+    <dimen name="tslayoutmain_height">900dp</dimen>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tsbody_height">300dp</dimen>
+    <dimen name="tsheader_height">100dp</dimen>
+    <dimen name="tslayoutmain_height">600dp</dimen>
+    <dimen name="abc_config_prefDialogWidth">440dp</dimen>
+    <dimen name="abc_dialog_fixed_height_major">60%</dimen>
+    <dimen name="abc_dialog_fixed_height_minor">90%</dimen>
+    <dimen name="abc_dialog_fixed_width_major">60%</dimen>
+    <dimen name="abc_dialog_fixed_width_minor">90%</dimen>
+    <dimen name="abc_dialog_min_width_major">55%</dimen>
+    <dimen name="abc_dialog_min_width_minor">80%</dimen>
+    <dimen name="listview_extramenu_height">190dp</dimen>
+    <dimen name="listview_menu_height">250dp</dimen>
+    <dimen name="menu_fragment_width">600dp</dimen>
+    <dimen name="menu_menu">16sp</dimen>
+    <dimen name="menu_shadow_height">60dp</dimen>
+    <dimen name="padding_top">10dp</dimen>
+    <dimen name="sheetpeekHeight">32dp</dimen>
+    <dimen name="toolbar_name">28sp</dimen>
+</resources>
