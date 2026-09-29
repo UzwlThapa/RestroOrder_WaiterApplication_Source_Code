@@ -3,7 +3,7 @@
     android:layout_gravity="top|right"
     android:orientation="vertical"
     android:clickable="false"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:behavior_peekHeight="@dimen/sheetpeekHeight"
     app:behavior_hideable="false"

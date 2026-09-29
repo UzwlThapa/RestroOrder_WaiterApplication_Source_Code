@@ -35,7 +35,7 @@
                 android:layout_marginTop="7dp"
                 android:text="Reload"/>
             <EditText
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textColorHint="#ff787777"
                 android:layout_gravity="right"
                 android:id="@+id/edit_search"
@@ -55,12 +55,13 @@
             android:layout_gravity="center"
             android:id="@+id/gridView_item_search"
             android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="600dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:horizontalSpacing="10dp"
             android:verticalSpacing="10dp"
             android:stretchMode="columnWidth"
-            android:columnWidth="200dp"
+            android:columnWidth="@dimen/menu_grid_column"
             android:numColumns="auto_fit"/>
         <android.support.v7.widget.RecyclerView
             android:gravity="center"
@@ -68,8 +69,9 @@
             android:id="@+id/recycler_view_menu"
             android:paddingLeft="4dp"
             android:visibility="visible"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
         android:layout_gravity="center"

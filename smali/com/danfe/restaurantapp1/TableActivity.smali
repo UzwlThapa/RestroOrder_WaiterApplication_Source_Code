@@ -1923,6 +1923,37 @@
 
     check-cast v3, Landroid/widget/GridView;
 
+    invoke-virtual {p0}, Lcom/danfe/restaurantapp1/TableActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    const/high16 v5, 0x42e80000    # 116.0f
+
+    invoke-static {v4, v5, v4}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result v4
+
+    float-to-int v4, v4
+
+    const/16 v5, 0xa
+
+    rem-int/lit8 v4, v4, -0x6
+
+    div-int/lit8 v4, v4, 0x2
+
+    if-lez v4, :cond_6
+
+    invoke-virtual {v3, v4}, Landroid/widget/GridView;->setNumColumns(I)V
+
+    :cond_6
+    const/4 v5, 0x0
+
     iput-object v3, p0, Lcom/danfe/restaurantapp1/TableActivity;->gvTable:Landroid/widget/GridView;
 
     .line 166
