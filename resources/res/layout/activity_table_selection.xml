@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/tslayoutmain_height">
+    android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
         android:background="@color/orange"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/tsheader_height">
+        android:layout_height="wrap_content">
         <LinearLayout
             android:orientation="horizontal"
             android:id="@+id/show_bill_header"
@@ -20,7 +20,7 @@
                 android:id="@+id/shifItem_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:text="Shift Order "
                 android:fontFamily="sans-serif-condensed"/>
             <TextView
@@ -29,8 +29,8 @@
                 android:id="@+id/tv_showbill_table"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="FROM:"
                 android:fontFamily="sans-serif-condensed"/>
             <TextView
@@ -39,7 +39,7 @@
                 android:id="@+id/tv_shift_tablename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:text="From Title "
                 android:layout_toRightOf="@+id/tv_showbill_table"
                 android:fontFamily="sans-serif-condensed"/>
@@ -49,8 +49,8 @@
                 android:id="@+id/tv_showbill_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="Bill No: "
                 android:layout_toRightOf="@+id/shifItem_title"
                 android:fontFamily="sans-serif-condensed"/>
@@ -72,8 +72,8 @@
                 android:id="@+id/tv_tabledate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="Date: "
                 android:fontFamily="sans-serif-condensed"/>
             <TextView
@@ -82,7 +82,7 @@
                 android:id="@+id/tv_shift_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:text="Date "
                 android:layout_toRightOf="@+id/tv_tabledate"
                 android:fontFamily="sans-serif-condensed"/>
@@ -92,8 +92,8 @@
                 android:id="@+id/tv_waiter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginLeft="20dp"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
                 android:text="Waiter: "
                 android:layout_toRightOf="@+id/tv_shift_date"
                 android:fontFamily="sans-serif-condensed"/>
@@ -103,7 +103,7 @@
                 android:id="@+id/tv_shift_waitername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:text="Waiter name"
                 android:layout_toRightOf="@+id/tv_waiter"
                 android:fontFamily="sans-serif-condensed"/>
@@ -118,7 +118,8 @@
         android:orientation="vertical"
         android:id="@+id/layoutDatats"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/tsbody_height">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <LinearLayout
             android:gravity="center"
             android:orientation="horizontal"
@@ -299,10 +300,10 @@
         android:layout_marginTop="0dp"/>
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:baselineAligned="true">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:baselineAligned="false">
         <Button
             android:textSize="@dimen/activity_main_bt_send_textSize"
             android:textColor="@color/black"
@@ -310,10 +311,11 @@
             android:layout_gravity="end"
             android:id="@+id/bt_shift_cancel"
             android:background="@drawable/button_bg"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
             android:text="Cancel"
             android:textAllCaps="false"
             android:fontFamily="sans-serif-condensed"/>
@@ -324,8 +326,10 @@
             android:layout_gravity="end"
             android:id="@+id/bt_ShiftTable"
             android:background="@drawable/button_bg"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
             android:text="Shift Table"
             android:textAllCaps="false"
             android:fontFamily="sans-serif-condensed"/>

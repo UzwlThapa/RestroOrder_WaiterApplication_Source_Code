@@ -33,6 +33,31 @@
 
     invoke-direct {v4, p0}, Lcom/danfe/restaurantapp1/helper/Preferences;-><init>(Landroid/content/Context;)V
 
+    const-string v5, "ipLock"
+
+    invoke-virtual {v4, v5}, Lcom/danfe/restaurantapp1/helper/Preferences;->getPreferencesBoolean(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-ez v5, :cond_ip_unlocked
+
+    const-string v5, "IP address is locked. Contact administrator."
+
+    const/4 v6, 0x0
+
+    invoke-static {p0, v5, v6}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/widget/Toast;->show()V
+
+    return-void
+
+    :cond_ip_unlocked
+    new-instance v4, Lcom/danfe/restaurantapp1/helper/Preferences;
+
+    invoke-direct {v4, p0}, Lcom/danfe/restaurantapp1/helper/Preferences;-><init>(Landroid/content/Context;)V
+
     .line 313
     .local v4, "preference":Lcom/danfe/restaurantapp1/helper/Preferences;
     new-instance v0, Landroid/app/AlertDialog$Builder;

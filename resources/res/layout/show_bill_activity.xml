@@ -16,7 +16,7 @@
                 android:id="@+id/show_bill_header"
                 android:background="@color/orange"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp">
                 <TextView
                     android:textSize="@dimen/spinner_txt_size"
@@ -413,7 +413,7 @@
                         android:paddingBottom="@dimen/activity_main_layout_selected_title_padding"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:text="Sub Total"
                         android:fontFamily="sans-serif-condensed"/>
                 </LinearLayout>
@@ -423,7 +423,7 @@
                     android:id="@+id/layout_noData"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp">
+                    android:layout_marginRight="10dp">
                     <ListView
                         android:layout_gravity="end"
                         android:id="@+id/lv_fragment_discount"
@@ -452,7 +452,7 @@
                         android:id="@+id/tv_totaldiscount_fragment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:fontFamily="sans-serif-condensed"/>
                 </LinearLayout>
                 <LinearLayout
@@ -479,7 +479,7 @@
                         android:id="@+id/tv_totalRoomAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:fontFamily="sans-serif-condensed"/>
                 </LinearLayout>
                 <LinearLayout
@@ -504,7 +504,7 @@
                         android:id="@+id/tv_showbill_basicAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:text="Basic Amount"
                         android:fontFamily="sans-serif-condensed"/>
                 </LinearLayout>
@@ -515,7 +515,7 @@
                     android:id="@+id/layout_fragment_billing"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="30dp"/>
+                    android:layout_marginRight="10dp"/>
                 <LinearLayout
                     android:layout_gravity="end"
                     android:orientation="horizontal"
@@ -538,7 +538,7 @@
                         android:id="@+id/tv_showbill_netAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:text="Net Amount"
                         android:fontFamily="sans-serif-condensed"/>
                 </LinearLayout>
@@ -566,7 +566,7 @@
                         android:id="@+id/tv_advance_payment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:text="0.00"
                         android:fontFamily="sans-serif-condensed"/>
                 </LinearLayout>
@@ -594,7 +594,7 @@
                         android:id="@+id/tv_remaining_Amount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:text="0.00"
                         android:fontFamily="sans-serif-condensed"/>
                 </LinearLayout>
